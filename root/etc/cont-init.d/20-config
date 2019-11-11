@@ -1,0 +1,16 @@
+#!/usr/bin/with-contenv bash
+
+# make our folders
+mkdir -p \
+	/app \
+	/run
+
+
+# permissions
+find /app -type d -path /app -prune -o -print0 | xargs -0 chown app:app
+chown -R app:app /app
+
+find /app -type d -path /app  -prune -o -print0 | xargs -0 chmod g+w
+chmod -R g+w /app
+
+chmod -R 644 /etc/logrotate.d

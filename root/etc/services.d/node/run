@@ -1,0 +1,8 @@
+#!/usr/bin/with-contenv bash
+
+if [[ 'development' == $NODE_ENV ]]
+then
+    exec npm run develop --prefix /app
+else
+    exec npm start --prefix /app
+fi
