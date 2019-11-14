@@ -1,6 +1,6 @@
 FROM shokohsc/alpine-s6:3.9
 
-ENV WORKDIR "/app"
+ENV WORKDIR "/var/www"
 
 # install packages
 RUN \
@@ -21,6 +21,6 @@ ADD root/ /
 
 # ports and volumes
 EXPOSE 3000
-VOLUME /app
+VOLUME /var/www
 
 WORKDIR ${WORKDIR}
