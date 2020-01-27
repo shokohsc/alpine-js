@@ -2,7 +2,7 @@
 
 if [[ 'development' == $NODE_ENV ]]
 then
-    exec npm run develop --prefix /var/www
+    exec npm run develop --prefix /app
 else
-    exec npm start --prefix /var/www
+    exec npm start --prefix /app
 fi
